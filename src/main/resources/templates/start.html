@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head th:replace="index :: header"/>
+<body style="background-color: #1b59b5; color: aliceblue">
+<div th:replace="index :: menu"/>
+<div class="d-flex p-2">
+    <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px; border-radius: 5px; margin: 2%">
+            <span class="fs-4" style="border-radius: 5px;background-color: #1b59b5;color: aliceblue; text-align: center">
+                Table of content</span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="#one" class="nav-link link-dark">
+                    Use of social media API
+                </a>
+            </li>
+            <li>
+                <a href="#two" class="nav-link link-dark">
+                    Run it yourself
+                </a>
+            </li>
+            <li>
+                <a href="#three" class="nav-link link-dark">
+                    Person API
+                </a>
+            </li>
+            <li>
+                <a href="#four" class="nav-link link-dark">
+                    Follow API
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div th:replace="index :: logo"/>
+            <div class="row" style="margin-bottom: 5%; margin-top: 2%">
+                <h1>Get Started</h1>
+            </div>
+            <div style="text-align: center">
+                <div class="row">
+                    <h2 id="one" style="margin-bottom: 3%">Use of social media API</h2>
+                    <p>You can test the social media API on your projects by fetching from your project to our public
+                     resources </p>
+                    </div>
+                <br/>
+                <div class="row">
+                    <h5>Test the API on the website UI</h5>
+                    <p> If you need to make a picture of social media API,
+                        you can have a look into the API by testing it with
+                        our small user interface. </p>
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4">
+                        <button type="button" class="btn btn-light" style="color: #1b59b5"
+                                onclick="window.location.href='/web/people'">
+                            <b>Try it now!!</b>
+                        </button>
+                    </div>
+                    <div class="col-sm-4"></div>
+                </div>
+                <br/>
+                <br/>
+                <div class="row">
+                    <h2 id="two">Run it yourself</h2>
+                    <p>You can even run it yourself with Docker!</p>
+                    <p>Check out the <a style="color: black" href="https://github.com/Zeljko-Predjeskovic/springboot-social-media">Code</a>
+                        where you have an installation guide:
+                    </p>
+                    <p></p>
+                </div>
+                <div class="row">
+                    <h2 id="three">Person API</h2>
+                    <p>Create your own person with a <b>POST</b>:</p>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <div class="container" style="color: darkslategray;background-color: aliceblue; border-radius: 15px">
+                            <div style="margin: 15px"> <b>https://predjeskovic.com/socialmedia/people</b></div></p>
+                            <div style="margin: 2px"> <b>Requested Body:</b>
+                                { </p>
+                                <a style="color: darkgreen">"firstName:"</a> "firstName", </p>
+                                <a style="color: darkgreen">"lastName:"</a> "lastName", </p>
+                                <a style="color: darkgreen">"username:"</a> "username", </p>
+                                <a style="color: darkgreen">"email:"</a> "email"
+                                }
+                            </div>
+                        </div>
+                    </div></p>
+                    <div class="col-sm-2"></div>
+                    <p>Find the person your created by typing the username from your creation with a <b>GET:</b></p>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <div class="container" style="color: darkslategray;background-color: aliceblue; border-radius: 5px">
+                            <div style="padding: 2px">  <b>https://predjeskovic.com/socialmedia/people/username</b> </div>
+                        </div>
+                    </div></p>
+                    <div class="col-sm-2"></div>
+                    <p>To see all the People with a
+                        <b>GET</b>:</p>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <div class="container" style="color: darkslategray;background-color: aliceblue; border-radius: 5px">
+                            <div>  <b>https://predjeskovic.com/socialmedia/people</b> </div>
+                        </div>
+                    </div></p>
+                    <div class="col-sm-2"></div>
+
+                </div>
+                <div class="row">
+                    <h2 id="four">Follow API</h2>
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="index :: header"/>
+
+<body style="background-color: #1b59b5; color: aliceblue">
+<div th:replace="index :: menu"/>
+<div th:replace="index :: logo"/>
+
+<div class="container">
+    <div class="row" >
+        <div class="col-sm-2"></div>
+
+        <div class="col-sm-8 align-items-center">
+            <h1 style="margin-top: 5%; margin-bottom: 5%">Are you sure you want to delete this person?</h1>
+
+            <table class="table" style="color: aliceblue">
+                <tbody>
+                <tr>
+                    <th scope="row">First Name</th>
+                    <td th:text="${person.getFirstName()}" ></th>
+                </tr>
+                <tr>
+                    <th scope="row">Last Name</th>
+                    <td th:text="${person.getLastName()}"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Username</th>
+                    <td th:text="${person.getUsername()}"></td>
+                </tr>
+                <tr>
+                    <th scope="row">E-mail</th>
+                    <td th:text="${person.getEmail()}"></td>
+                </tr>
+                </tbody>
+            </table>
+
+                <a th:href="@{/web/people/deleteAction/(username=${person.getUsername()})}"
+                   class="btn btn-light"style="color: #1b59b5"><b>yes</b></a>
+            <a class="btn btn-light" href="/web/people" style="color: #1b59b5"><b>no</b></a>
+        </div>
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+
+</body>
+</html>
